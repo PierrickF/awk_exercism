@@ -1,6 +1,5 @@
-$0	{ name = $0 }
-END	{ if (length(name) > 0)
-		printf("One for %s, one for me.", name)
+END	{ if (length($0) > 0)
+		printf("One for %s, one for me.", $0)
 	else
-		printf("One for you, one for me.")
+		print "One for you, one for me."
 	}
