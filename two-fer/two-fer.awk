@@ -1,4 +1,6 @@
-BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
-}
+$0	{ name = $0 }
+END	{ if (length(name) > 0)
+		printf("One for %s, one for me.", name)
+	else
+		printf("One for you, one for me.")
+	}
