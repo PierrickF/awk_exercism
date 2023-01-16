@@ -2,6 +2,34 @@
 # - num
 
 BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
+    string = ""
+    if (int(num) % 3 == 0) {
+        string = string "Pling";
+        if (int(num) % 5 == 0) {
+            string = string "Plang";
+            if (int(num) % 7 == 0) {
+                string = string "Plong";
+            }
+        }
+        else if (int(num) % 7 == 0) {
+                string = string "Plong";
+        }
+    }
+
+    else if (int(num) % 5 == 0) {
+        string = string "Plang";
+        if (int(num) % 7 == 0) {
+            string = string "Plong";
+            }
+        }
+
+    else if (int(num) % 7 == 0) {
+        string = string "Plong";
+        }
+
+    else {
+            string = num;
+    }
+
+    printf "%s", string;
 }
