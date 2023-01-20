@@ -1,5 +1,5 @@
 {
-    # spli the input string into an array
+    # split the input string into an array
     split($0, chars, "")
     # initialize an empty string for later
     joined = ""
